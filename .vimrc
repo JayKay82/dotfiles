@@ -1,10 +1,23 @@
-"---------- General  ----------"
+"---------- General ----------"
 set nocompatible				"Turn off compatibility with Vi. This prevents Vi from interfering with certain settings and plugins.
-let mapleader = '\'				"Set a leader character for commands.
+filetype off
+let mapleader = '\' 				"Set a leader character for commands.
 set backspace=indent,eol,start			"Make backspace behave like every other editor.
 
 
-"---------- Visuals  ----------"
+"---------- Vundle ----------"
+
+set rtp+=~/.vim/bundle/Vundle.vim		"This is the route to Vundle
+call vundle#begin()
+	Plugin 'VundleVim/Vundle.vim'
+	Plugin 'tpope/vim-vinegar'
+	Plugin 'scrooloose/nerdtree'
+	Plugin 'ctrlpvim/ctrlp.vim'
+call vundle#end()
+filetype plugin indent on
+
+
+"---------- Visuals ----------"
 
 syntax on
 colorscheme jellybeans				"Set a colorscheme.	
